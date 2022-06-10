@@ -29,12 +29,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
 
-            transform.Translate(movementSpeed, 0, 0);
+            transform.Rotate(0, rotationSpeed, 0);
         }
         if (Input.GetKey(KeyCode.A))
         {
 
-            transform.Translate(-movementSpeed, 0, 0);
+            transform.Rotate(0, -rotationSpeed, 0);
         }
 
     }
