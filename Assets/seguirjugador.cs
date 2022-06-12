@@ -14,7 +14,7 @@ public class seguirjugador : MonoBehaviour {
 	
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "jugador")
         {
             dentro = true;
         }
@@ -23,7 +23,7 @@ public class seguirjugador : MonoBehaviour {
 
     void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "jugador")
         {
             dentro = false;
         }

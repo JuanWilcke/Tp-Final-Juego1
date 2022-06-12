@@ -10,12 +10,20 @@ public class Shoot : MonoBehaviour
     public GameObject BalaPrefab;
     //Agregar Bala Velocidad
     public float BalaVelocidad;
-
+    float tiempodisparo;
+    private void Start()
+    {
+        tiempodisparo = 0;
+    }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Time.time > tiempodisparo + 0.5)
         {
+
+        
+            if (Input.GetKeyDown(KeyCode.E))
+            {
             //1-Instanciar la BalaPrefab en las posiciones de BalaInicio
             GameObject BalaTemporal = Instantiate(BalaPrefab, BalaInicio.transform.position, BalaInicio.transform.rotation) as GameObject;
 
@@ -27,6 +35,8 @@ public class Shoot : MonoBehaviour
 
             //Debemos Destruir la bala
             Destroy(BalaTemporal, 5.0f);
+                tiempodisparo = Time.time;
+            }
         }
     }
 }
