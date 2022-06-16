@@ -7,6 +7,6 @@ public class MuerteDelJugador : MonoBehaviour
 {
    void OncollisionEnter(Collision other)
     {
-        SceneManager.LoadScene("SceneDerrota");
+
     }
 }

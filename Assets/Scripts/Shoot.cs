@@ -17,6 +17,7 @@ public class Shoot : MonoBehaviour
         tiempodisparo = 0;
     }
     // Update is called once per frame
+   
     void Update()
     {
         if (Time.time > tiempodisparo + 0.5)

@@ -21,8 +21,12 @@ public class Enemigo : MonoBehaviour
         }      
     }
     // Update is called once per frame
-    void Update()
+    void OnTriggerEnter(Collider colwithUser)
     {
-        
+        if (colwithUser.gameObject.name == "Bala")
+        {
+            transform.position = new Vector3(-4, -4, -4);
+        }
     }
+
 }
