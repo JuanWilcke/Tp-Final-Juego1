@@ -23,9 +23,10 @@ public class Enemigo : MonoBehaviour
     // Update is called once per frame
     void OnTriggerEnter(Collider colwithUser)
     {
-        if (colwithUser.gameObject.name == "Bala")
+        if (colwithUser.gameObject.name == "Bala(Clone)")
         {
             transform.position = new Vector3(-4, -4, -4);
+            
         }
     }
 
